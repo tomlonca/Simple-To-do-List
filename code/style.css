@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("fotos/bosque2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    position: relative;
+}
+
+.todo-app {
+
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Aplicar un desenfoque de 10px al fondo */
+    border: 4px solid rgba(255, 255, 255, 0.3)
+}
+
+.todo-app h2 {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 45px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #cbc8c8;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input {
+    flex: 1;                  /* Permite que el campo de entrada crezca y ocupe todo el espacio disponible en su contenedor flexible */
+    border: none;             /* Elimina cualquier borde del campo de entrada */
+    outline: none;            /* Elimina el contorno que aparece al enfocar el campo de entrada */
+    background: transparent;  /* Hace que el fondo del campo de entrada sea transparente */
+    padding: 10px;            /* Agrega un relleno interno de 10 píxeles en todos los lados del campo de entrada */
+    font-weight: 14px;        /* Establece el tamaño de la fuente del texto dentro del campo de entrada en 14 píxeles */
+}
+
+button {
+    border: none;             /* Elimina cualquier borde del botón */
+    outline: none;            /* Elimina el contorno que aparece al enfocar el botón */
+    padding: 16px 50px;       /* Agrega un relleno interno de 16px arriba y abajo, y 50px a los lados */
+    background: #0d2c13;      /* Establece el color de fondo del botón en un tono específico de rojo (#ff5945) */
+    color: #fff;              /* Establece el color del texto del botón en blanco (#fff) */
+    font-size: 16px;          /* Establece el tamaño de la fuente del texto del botón en 16px */
+    cursor: pointer;          /* Cambia el cursor a un puntero cuando el mouse está sobre el botón, indicando que es interactivo */
+    border-radius: 40px;      /* Aplica un borde redondeado al botón con un radio de 40px */
+}
+ul li {
+    color: #fff;
+    list-style: none;
+    font-size: 15px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(fotos/unchecked_white.png);
+    background-size: cover;
+    background-position: center;
+    top: 6px;
+    left: 8px;
+
+}
+ul li.checked{
+    color: #666666;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(fotos/checked.png);
+}
+ul li span {
+    position:absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
